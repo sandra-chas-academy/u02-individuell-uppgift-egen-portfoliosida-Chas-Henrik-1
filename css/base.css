@@ -1,0 +1,111 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Fonts*/
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "DM Sans", sans-serif;
+    --formal-font: "Radley", serif;
+
+    /* Theme colors */
+    --background-light-mode: #FFFFFF;
+    --background-dark-mode: #191919;
+    --background-card-dark-mode: #363636;
+    --solid-heading-light-mode: #42446E;
+    --solid-heading-dark-mode: #CCCCCC;
+    --dark-content-light-mode: #666666;
+    --light-content-dark-mode: #A7A7A7;
+    --very-light-content-dark-mode: #D9D9D9;
+    --black-content-light-mode: #000000;
+    --black-content-dark-mode: #FFFFFF;
+    --box-shadow-light-mode: 2px 2px 30px 0px #00000033;
+    --box-shadow-hover-light-mode: 2px 2px 2px 0px #00000033;
+    --box-shadow-tiny-light-mode: 2px 2px 10px 0px #00000033;
+    --progress-bar-color-value: #0f0bfc;
+    --progress-bar-color: #DDF5FC;
+    --background-first-letter: #BCE9F5;
+    --contact-light-mode: #1E0E62;
+    --contact-dark-mode: #D9D9D9;
+    --background-contact: #F1FBFC;
+    --border-color-light-mode: #EBEAED;
+    --border-color-dark-mode: #42446E;
+    --button-text: #018C0F;
+    --background-button-success: #D7FFE0;
+    --details-technology: #018C0F;
+    --background-details-technology: #F1F0F0;
+    --background-details-technology-dark-mode: #CCCCCC;
+    --menu-color-hover: #54C4F8;
+    --border-color-card: rgb(77, 188, 224);
+
+    /* gradient colors */
+    --gradient-name-start: #25A5FA;
+    --gradient-name-end: #A74AFD;
+    --gradient-border-start: #CCE8F4;
+    --gradient-border-end: #CCE8F4;
+
+}
+
+.gradient-name {
+    background: var(--gradient-name-start);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--gradient-name-start), var(--gradient-name-end)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--gradient-name-start), var(--gradient-name-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gradient-border {
+    background: var(--gradient-border-start);
+    background: -webkit-linear-gradient(to bottom, var(--gradient-border-start), var(--gradient-border-end)); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, var(--gradient-border-start), var(--gradient-border-end)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.text-shadow-active {
+    color: var(--menu-color-hover) !important;
+    text-shadow: 1px 1px 2px var(--menu-color-hover), 0 0 1em var(--menu-color-hover), 0 0 0.2em var(--progress-bar-color);
+}
+
+#progress-control {
+    position: fixed;
+    top: calc(50svh - 125px);
+    left: calc(50vw - 125px);
+    width: 250px;
+    height: 250px;
+    padding: 1rem;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#progress-container {
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: conic-gradient(var(--progress-bar-color-value) 0deg, var(--progress-bar-color) 0deg);
+}
+
+#progress-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#progress-action {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}

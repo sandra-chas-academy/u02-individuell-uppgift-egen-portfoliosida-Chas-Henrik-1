@@ -1,77 +1,68 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Y0f03qEq)
-# Instruktioner
+# Personal portfolio page
 
-Denna uppgift går ut på att du bygga vidare uppgift u01 - Portfoliosida utifrån designskiss med Javascript. Du är nu fri att ändra till egen design / layout, samt eget innehåll. Det är dock viktigt att du behåller en sektion för CV ("About me") och en sektion med projekt ("Projects") eftersom du ska vidareutveckla sidan med Javascript på dessa sektioner. 
+This is a single-page, 'Portfolio Site' consisting of 5 sections:
+- Home
+- About
+- Tech Stack
+- Projects
+- Contact
 
-## Vad du ska göra
+The design is a 'Mobile First' responsive design that also support Tablet's and Desktop's. Breakpoints have been set at 650px for Tablet's & Small Desktop's, and 1024px for Medium & Large Desktop's.  
+  
+Two additional content driven breakpoints have been set at 815px and 1350px:  
+- The 815px breakpoint achieves a smooth transition from the 'mobile full screen project card' as the card turns directly into two cards when passing the breakpoint.  
+- The 1350px breakpoint prevents navigation bar overflow and 'profile picture bouncing' when resizing the Web Browser on a Desktop.  
+  
+The site uses HTML5, CSS & JavaScript and the following Java Script 'user interaction' has been added:
+1. Progress bar when user loads the page
+2. Hamburger menu
+3. A ResizeObserver has been added to the Header that updates the `scroll-padding-top` attribute when the header is resized, to achieve flawless scroll offset for the site internal menu links
+4. Active menu indication
 
-Du ska bygga vidare på  u01 - Portfoliosida utifrån designskiss med Javascript. och se till att du följer följande kravställningar: 
+The site supports ‘dark theme’ (configured through the operating system settings).  
+  
+All images, except the profile picture and the 'artistic images' (in the project section) are 'formatted' as svg images to scale seamlessly with different screen resolutions. The 'artistic images' are png formatted to preserve the details of the image while keeping a reasonable file size. The profile picture is jpg formatted as that's the only available format for that particular image.  
+  
+The `display: inline; vertical-align: middle;` solution has been selected over the 'flex-box' solution for the 'icon & text grid cells' even though the icon vertical alignment is slightly worse. The reason for this, is that the 'line wrap behavior' is way better for the 'vertical-align' solution when the (icon & text) line run out of horizontal space.
+  
+A 'three column menu' has been used for Tablet's & Small Desktop's in favor of a the 'two column menu' to reduce the header height as much as possible.
 
-### CV i en fil:
-Dina egna utbildningar och tidigare arbetsplatser ska nu ersätta "About me"-sidan. Ta med så mycket som möjligt att ditt "riktiga CV", men iallafall minst tre poster av varje.
-Vilka utbildningar du läst och vilka tidigare arbeten du haft ska ligga i en separat fil i JSON-format. Denna JSON-fil ska läsas och och generera ditt CV på den tidigare motsvarigheten av "About me" sidan.
+The site is published on Netlify (see hyperlink below):  
+[https://chas-henrik-u02-designskiss.netlify.app/](https://chas-henrik-u02-designskiss.netlify.app/)
+  
+***
+*Known problems:*
+1. Contact gradient doesn't render properly when printed with Google Chrome.
+2. Gradients don't render properly when printed with Safari on iPad and iPhone.
 
+*Notes:*
 
-### Interaktiva scripts:
-Din CV-sida ska innehålla minst två interaktiva JavaScript. Exempel kan vara en modal, slideshow, scroll-effekt, dölja/visa element, o.s.v
+***
 
-### Portfolio:
- Du publicerar minst två uppgifter / projekt från tidigare eller nuvarande studier / arbete inom HTML /CSS
+## Frågor:
 
-### 👉  VG-krav
+### Vad kan man utveckla m.h.a av Javascript inom frontend?
+Man kan utveckla interaktion & funktionalitet m.h.a JavaScript.  
 
-Din portfolio ska utökas så att den hämtar in publika projekt som finns i din egen Github via API. Den ska visa dessa projekt i din portfolio med namn och beskrivning.
+Exempel på interaktion med användaren:
+1. Reagera på olika events (t.ex. click, mouseover, drag, drop)
+2. Ändra, lägga till och ta bort HTML element
+3. Visa & ta bort pop-ups
 
-Du får gärna ha både dessa projekt och andra som genereras utifrån JSON-data om du känner för det, eller så ersätter du projekten så det bara är dina Github-projekt. Eventuellt kan du behöva komplettera datan från Github API med t.ex bilder ifrån JSON-datan.
+Exempel på funktionalitet:
+1. Spara data i Local Storage
+2. Kommunicera med backend m.h.a Rest API
+3. Beräkningar i fronend såväl som backend
+4. Spara data i backend databas
+5. Kommunicera med externa tjänster m.h.a API (väderdata, recept, generera data från Chat GPT)
+  
+  
+### Vad är JSON och hur används det inom frontend?
 
-När hämtningen av projekten sker ska det finnas information om att projekten håller på att ladda in så att besökaren inte undrar varför sidan först är tom.
+JSON (JavaScript Object Notation) är ett lättviktigt format för att lagra och överföra data. Det är enkelt att läsa och skriva för människor och lätt att tolka och generera för maskiner. Formatet representerar data i arrayer och/eller 'nyckel-värde-par' och är språkoberoende, vilket innebär att det kan användas i många programmeringsspråk.  
+  
+JSON används för att utbyta data mellan webbläsaren och servern i frontend. 
+  
+### Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 
-
-
-### Tekniska krav:
-* Validerad med 0 fel på https://validator.w3.org
-* Inga errors i Console
-
-### Sammantfattning av projekt + teoretiska frågor
-
-1. Du sammanfattar ditt projekt i README.md och reflekterar kring styrkor och ev brister. Max 500 ord.
-2. Du svarar på dessa frågor (max 800 ord):
-
-Vad kan man utveckla m.h.a av Javascript inom frontend?
-Vad är JSON och hur används det inom frontend?
-Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
-
-
-## Kriterier för bedömning
-
-
-Icke Godkänd (IG), Godkänd (G) eller Väl Godkänd (VG)
-
-### Godkänd (G)
-Din portfolio-sida uppfyller alla krav enligt kravspecifikationen.
-Du visar att du kan utan allvarliga brister eller missar utveckla denna portfoliosida enligt kraven
-Du sammanfattar ditt projekt samt ger ett översiktligt och korrekt svar på frågorna
-
-
-### Väl Godkänd (VG)
-
-Din portfolio-sida uppfyller alla krav enligt kravspecifikationen samt VG-kraven
-Du uppvisar en mer avancerad förståelse för Git genom att jobba med en developer-branch som du sedan mergar i main
-Du visar att du kan utan brister, eller bara i sådan omfattning att de knappt märks eller påverkar slutresultatet
-
-
-### Börja uppgift / Din inlämning
-* Du börjar och lämnar in din uppgift genom Github Classroom på denna länk.
-* Återkoppling ges i Canvas
-
-
-
-
-
-
-
-
-
-
-
-# 
+HTTP (HyperText Transfer Protocol) är ett applikationslager protokoll i Internet-protokoll svitmodellen för distribuerade, kollaborativa hypermedia informationssystem.
