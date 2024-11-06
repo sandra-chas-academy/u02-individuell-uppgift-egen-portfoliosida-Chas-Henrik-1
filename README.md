@@ -32,7 +32,7 @@ The `display: inline; vertical-align: middle;` solution has been selected over t
 A 'three column menu' has been used for Tablet's & Small Desktop's in favor of a the 'two column menu' to reduce the header height as much as possible.
   
 The site is published on Netlify (see hyperlink below):  
-[https://chas-henrik-u02-designskiss.netlify.app/](https://chas-henrik-u02-designskiss.netlify.app/)
+[https://chas-henrik-u02-egen-portfoliosida.netlify.app/](https://chas-henrik-u02-egen-portfoliosida.netlify.app/)
   
 ***
 *Known problems:*
