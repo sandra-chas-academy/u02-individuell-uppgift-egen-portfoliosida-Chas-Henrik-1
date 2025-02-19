@@ -45,12 +45,12 @@ function expandAllDetails(e) {
 
 // *** Connect to GitHub & populate page ***
 const REPOS = [ 
-    {name: "Minesweeper", site: "https://chas-henrik.github.io/Minesweeper/"}, 
-    {name: "OOP-Poker", site: "https://chas-henrik.github.io/OOP-Poker/"},
-    {name: "ToDo-List-Typescript-Firebase", site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/"},
-    {name: "Word-Count", site: "https://chas-henrik.github.io/Word-Count/"},
-    {name: "Profile-Card", site: "https://chas-henrik.github.io/Profile-Card/"},
-    {name: "Menu-Nailbiter", site: "https://chas-henrik.github.io/Menu-Nailbiter/"}
+    {name: "Minesweeper", repo: "https://github.com/Chas-Henrik/Minesweeper", site: "https://chas-henrik.github.io/Minesweeper/"}, 
+    {name: "OOP-Poker", repo: "https://github.com/Chas-Henrik/OOP-Poker", site: "https://chas-henrik.github.io/OOP-Poker/"},
+    {name: "ToDo-List-Typescript-Firebase", repo: "https://github.com/Chas-Henrik/ToDo-List-Typescript-Firebase", site: "https://chas-henrik.github.io/ToDo-List-Typescript-Firebase/"},
+    {name: "Word-Count", repo: "https://github.com/Chas-Henrik/Word-Count", site: "https://chas-henrik.github.io/Word-Count/"},
+    {name: "Profile-Card", repo: "https://github.com/Chas-Henrik/Profile-Card", site: "https://chas-henrik.github.io/Profile-Card/"},
+    {name: "u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", repo: "https://github.com/Chas-Henrik/u07-individuell-uppgift-jobchaser-chas-henrik-nextjs", site: "https://u07-individuell-uppgift-jobchaser-chas-henrik-nextjs.vercel.app/"}
 ];
 const skillsAccumulated = {};
 
@@ -271,7 +271,7 @@ async function populateProjectCards() {
         descriptionElement.innerText = repoObj.data.description;
         techStackElement.innerText = languageStr;
         linkElements[0].href = REPOS[i].site;
-        linkElements[1].href = repoObj.data.html_url;
+        linkElements[1].href = REPOS[i].repo;
     };
 }
 
